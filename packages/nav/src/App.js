@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
+import Dashboard from '@material-ui/icons/Dashboard';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -26,6 +27,11 @@ const menu = [
     value: 'checkout',
     Icon: () => <ShoppingCart />,
   },
+  {
+    label: 'Dashboard',
+    value: 'dashboard',
+    Icon: () => <Dashboard />,
+  }
 ];
 
 class LabelBottomNavigation extends React.Component {

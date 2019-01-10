@@ -25,6 +25,11 @@ registerApplication(
   () => SystemJS.import('/checkout/singleSPA.js'),
   pathPrefix('/checkout'),
 );
+registerApplication(
+  'dashboard-app',
+  () => SystemJS.import('/dashboard/singleSPA.js'),
+  pathPrefix('/dashboard'),
+);
 
 start();
 serviceWorker.unregister();
