@@ -118,3 +118,9 @@ function domElementGetter() {
 
 Agora basta rodar a aplicação novamente `yarn start`
 
+## TODO
+
+- [x] Criar estrutura para carregamento de css dos apps filhos
+- [ ] Criar estrutura de comunicação entre apps com Redux de forma lazy
+- [ ] Teste com react-router para mudar div dos apps filhos
+
