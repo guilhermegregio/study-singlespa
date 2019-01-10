@@ -2,10 +2,12 @@ import {navigateToUrl} from 'single-spa';
 import React from 'react';
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import CalendarToday from '@material-ui/icons/CalendarToday';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
 
 const styles = {
   root: {
@@ -13,36 +15,42 @@ const styles = {
   },
 };
 
+const menu = [
+  {
+    label: 'Calendário',
+    value: 'calendar',
+    Icon: () => <CalendarToday />,
+  },
+  {
+    label: 'Checkout',
+    value: 'checkout',
+    Icon: () => <ShoppingCart />,
+  },
+];
+
 class LabelBottomNavigation extends React.Component {
   state = {
     value: 'calendar',
   };
 
-  handleChange = (event, value) => {
+  handleChange = value => event => {
     this.setState({value});
     navigateToUrl(value);
   };
 
   render() {
-    const {classes} = this.props;
-    const {value} = this.state;
-
     return (
-      <BottomNavigation
-        value={value}
-        onChange={this.handleChange}
-        className={classes.root}>
-        <BottomNavigationAction
-          label="Calendar"
-          value="calendar"
-          icon={<CalendarToday />}
-        />
-        <BottomNavigationAction
-          label="Checkout"
-          value="checkout"
-		  icon={<ShoppingCart />}
-        />
-      </BottomNavigation>
+      <List>
+        {menu.map((item, index) => (
+          <ListItem
+            button
+            key={item.value}
+            onClick={this.handleChange(item.value)}>
+            <ListItemIcon>{item.Icon()}</ListItemIcon>
+            <ListItemText primary={item.label} />
+          </ListItem>
+        ))}
+      </List>
     );
   }
 }
