@@ -21,4 +21,10 @@ module.exports = function(app) {
       proxyRewritePath('^/checkout', 'http://localhost:1236'),
     ),
   );
+  app.use(
+    proxy(
+      '/dashboard/',
+      proxyRewritePath('^/dashboard', 'http://localhost:1237'),
+    ),
+  );
 };
