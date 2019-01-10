@@ -1,33 +1,21 @@
 # Case Study for Microfrontends with SingleSpa
 
-### Dependencies
+## Dependencies
 
 - Lerna
 - SingleSpa
 - React
 - Parcel-bundler
 
-### Scripts
+## Available Scripts
 
-#### Install Deps
+No diretório do projeto, você pode rodar:
 
-```
-npm install
-```
+### `npm start` or `yarn`
 
-or
+Para baixar todas as dependencias dos projeto e dos filhos
 
-```
-yarn
-```
+### `npm start` or `yarn start`
 
-#### Iniciar apps
-
-```
-npm start
-```
-
-``` 
-yarn start
-```
+Para rodar a aplicação inteira, projeto root com projetos filhos
 
