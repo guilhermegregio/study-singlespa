@@ -160,6 +160,7 @@ class MiniDrawer extends React.Component {
           <div className={classes.toolbar} />
           <div id="calendar" />
           <div id="checkout" />
+          <div id="dashboard" />
         </main>
       </div>
     );
