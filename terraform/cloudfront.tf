@@ -29,6 +29,10 @@ resource "aws_cloudfront_distribution" "main" {
         forward = "none"
       }
     }
+    lambda_function_association {
+      event_type = "origin-request"
+      lambda_arn = "${aws_lambda_function.proxy.qualified_arn}"
+    }
   }
   viewer_certificate {
     cloudfront_default_certificate = true
