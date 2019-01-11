@@ -3,7 +3,6 @@ import * as serviceWorker from './serviceWorker';
 import './index.css';
 
 const SystemJS = window.System;
-
 const pathPrefix = prefix => location => location.pathname.startsWith(prefix);
 
 registerApplication('root', () => import('./root.app.js'), () => true);

@@ -8,7 +8,8 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "single-spa": "^4.0.1",
-    "single-spa-react": "^2.9.0"
+    "single-spa-react": "^2.9.0",
+    "systemjs": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,6 +27,7 @@
   ],
   "devDependencies": {
     "http-proxy-middleware": "^0.19.1",
+    "parcel-bundler": "^1.11.0",
     "react-scripts": "2.1.3"
   }
 }

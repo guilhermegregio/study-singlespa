@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
@@ -13,17 +12,7 @@ const reactLifecycles = singleSpaReact({
 
 export const bootstrap = [reactLifecycles.bootstrap];
 
-export const mount = [
-  function() {
-    const head = document.getElementsByTagName('head')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = '/checkout/singleSPA.css';
-    head.appendChild(link);
-    return reactLifecycles.mount(...arguments);
-  },
-];
+export const mount = [reactLifecycles.mount];
 
 export const unmount = [reactLifecycles.unmount];
 

@@ -14,12 +14,15 @@ export const bootstrap = [reactLifecycles.bootstrap];
 
 export const mount = [
   function() {
-    const head = document.getElementsByTagName('head')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = '/calendar/singleSPA.css';
-    head.appendChild(link);
+    if (!document.getElementById('calendar-styles')) {
+      const head = document.getElementsByTagName('head')[0];
+      const link = document.createElement('link');
+      link.id = 'calendar-styles';
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = '/calendar/singleSPA.css';
+      head.appendChild(link);
+    }
     return reactLifecycles.mount(...arguments);
   },
 ];

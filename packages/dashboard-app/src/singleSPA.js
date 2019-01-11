@@ -13,17 +13,7 @@ const reactLifecycles = singleSpaReact({
 
 export const bootstrap = [reactLifecycles.bootstrap];
 
-export const mount = [
-  function() {
-    const head = document.getElementsByTagName('head')[0];
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = '/dashboard/singleSPA.css';
-    head.appendChild(link);
-    return reactLifecycles.mount(...arguments);
-  },
-];
+export const mount = [reactLifecycles.mount];
 
 export const unmount = [reactLifecycles.unmount];
 
