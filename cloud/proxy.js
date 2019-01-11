@@ -18,18 +18,6 @@ exports.handler = (evt, ctx, cb) => {
   redirect('/dashboard', dashboard_bucket_name, newRequest);
   redirect('/nav', nav_bucket_name, newRequest);
 
-  // if (/^\/nav/.test(request.uri)) {
-  //   request.uri = request.uri.replace('/nav', '');
-  //
-  //   request.origin.s3.domainName = nav_bucket_name;
-  //   request.headers['host'] = [{key: 'host', value: nav_bucket_name}];
-  //
-  //
-  //
-  //   return cb(null, request);
-  // }
-
-  console.log(newRequest);
   cb(null, newRequest);
 }
 
@@ -44,8 +32,6 @@ function redirect(pathname, bucket, request) {
 
   request.origin.s3.domainName = bucket;
   request.headers['host'] = [{key: 'host', value: bucket}];
-
-  console.log(pathname, request);
 
   return request;
 }
