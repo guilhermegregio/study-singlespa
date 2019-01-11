@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "start:single-spa": "parcel src/singleSPA.js --port 1235",
     "build": "parcel build src/singleSPA.js",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "deploy": "sh ./deploy.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
