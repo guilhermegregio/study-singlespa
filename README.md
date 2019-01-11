@@ -11,7 +11,7 @@
 
 No diretório do projeto, você pode rodar:
 
-### `npm start` or `yarn`
+### `npm install` or `yarn`
 
 Para baixar todas as dependencias dos projeto e dos filhos
 
