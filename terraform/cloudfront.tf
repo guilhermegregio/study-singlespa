@@ -33,6 +33,10 @@ resource "aws_cloudfront_distribution" "main" {
       event_type = "origin-request"
       lambda_arn = "${aws_lambda_function.proxy.qualified_arn}"
     }
+    lambda_function_association {
+      event_type = "viewer-response"
+      lambda_arn = "${aws_lambda_function.headers.qualified_arn}"
+    }
   }
   viewer_certificate {
     cloudfront_default_certificate = true
