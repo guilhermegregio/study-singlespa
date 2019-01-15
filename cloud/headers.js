@@ -11,14 +11,6 @@ exports.handler = (event, context, callback) => {
     },
   ];
 
-  headers['content-security-policy'] = [
-    {
-      key: 'Content-Security-Policy',
-      value:
-        "default-src 'none'; img-src 'self'; script-src 'self'; style-src 'self'; object-src 'none'",
-    },
-  ];
-
   headers['x-content-type-options'] = [
     {
       key: 'X-Content-Type-Options',
