@@ -123,6 +123,8 @@ Agora basta rodar a aplicação novamente `yarn start`
 - [x] Criar estrutura para carregamento de css dos apps filhos
 - [ ] Criar estrutura de comunicação entre apps com Redux de forma lazy
 - [ ] Teste com react-router para mudar div dos apps filhos
-- [ ] Criar infra na aws com terraform
-- [ ] Criar scripts de deploy
+- [x] Criar infra na aws com terraform
+- [x] Criar scripts de deploy
+- [ ] Criar lambda para remover complexidade de autenticação
+
 
